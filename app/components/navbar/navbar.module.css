@@ -1,7 +1,16 @@
 .navbar {
+	padding: 10px;
 	display: flex;
-	/* width: 100vw; */
-	padding: 20px;
+	justify-content: space-between;
+	align-items: center;
+}
+.nav {
+	display: flex;
+	width: 70vw;
+	max-width: 700px;
+	padding: 10px;
 	justify-content: space-around;
+	text-align: center;
+	gap: 5px;
 	/* border-bottom: 2px solid black; */
 }

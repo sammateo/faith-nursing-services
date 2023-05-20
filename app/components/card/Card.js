@@ -12,7 +12,7 @@ function Card({ info, image, size }) {
 					</p>
 				</div>
 			) : (
-				<div className={styles.card} style={{ width: size }}>
+				<div className={styles.card} style={{ width: size, maxWidth: "600px" }}>
 					<p>{info}</p>
 				</div>
 			)}

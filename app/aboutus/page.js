@@ -17,10 +17,10 @@ export default function page() {
 			<Landing image={"url(/images/steth.jpg)"} info={"About Us"} />
 
 			<Title title={"About Us"} />
-			<Card info={aboutinfo} size={"60vw"} />
+			<Card info={aboutinfo} size={"90vw"} />
 			<Card
 				info={"We look forward to working with you and your family"}
-				size={"60vw"}
+				size={"90vw"}
 			/>
 		</div>
 	);
