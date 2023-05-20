@@ -1,0 +1,15 @@
+.landing {
+	box-shadow: 5px 10px 20px rgba(7, 108, 162, 0.3);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: white;
+}
+.landing p {
+	padding: 20px;
+	height: 70vh;
+	display: grid;
+	place-items: center;
+	font-size: 2rem;
+	text-align: center;
+}
