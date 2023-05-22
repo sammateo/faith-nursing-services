@@ -1,11 +1,36 @@
 "use client";
-import React from "react";
-import { useRouter } from "next/router";
+import React, { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import styles from "./navbar.module.css";
 import Link from "next/link";
 function NavBar() {
-	const { asPath, pathname } = useRouter();
+	const pathname = usePathname();
+	const [windowSize, setWindowSize] = useState([
+		window.innerWidth,
+		window.innerHeight,
+	]);
 
+	useEffect(() => {
+		const handleWindowResize = () => {
+			setWindowSize([window.innerWidth, window.innerHeight]);
+			if (window.innerWidth > 425) {
+				openMenu();
+			}
+		};
+
+		window.addEventListener("resize", handleWindowResize);
+
+		return () => {
+			window.removeEventListener("resize", handleWindowResize);
+		};
+	});
+	let openMenu = () => {
+		document.querySelector(".navitems").style.transform = "translateX(0vw)";
+		// document.querySelector(".navitems").style.backgroundColor = "blue";
+	};
+	let closeMenu = () => {
+		document.querySelector(".navitems").style.transform = "translateX(-100vw)";
+	};
 	return (
 		<div className={styles.navbar}>
 			<div>
@@ -22,23 +47,69 @@ function NavBar() {
 						Faith Nursing Services
 					</Link>
 				</p>
+				<img
+					className={styles.menuburger}
+					onClick={openMenu}
+					width="20"
+					src="/images/menu.svg"
+					alt="menu"
+				/>
 			</div>
-			<div className={styles.nav}>
-				<p>
-					<Link className="my-link" href="/">
-						Home
-					</Link>
-				</p>
-				<p>
+			<div className={styles.nav + " navitems"}>
+				<img
+					className={styles.menuclose}
+					onClick={closeMenu}
+					width="20"
+					src="/images/close.svg"
+					alt="close"
+				/>
+
+				{pathname === "/" ? (
+					<p style={{ borderBottom: "2px solid green" }}>
+						<Link className="my-link" href="/">
+							Home
+						</Link>
+					</p>
+				) : (
+					<p>
+						<Link className="my-link" href="/">
+							Home
+						</Link>
+					</p>
+				)}
+
+				{pathname.includes("aboutus") ? (
+					<p style={{ borderBottom: "2px solid green" }}>
+						<Link className="my-link" href="/aboutus">
+							About Us
+						</Link>
+					</p>
+				) : (
 					<Link className="my-link" href="/aboutus">
 						About Us
 					</Link>
-				</p>
-				<p>
-					<Link className="my-link" href="/contactus">
-						Contact Us
-					</Link>
-				</p>
+				)}
+
+				{pathname.includes("contactus") ? (
+					<p style={{ borderBottom: "2px solid green" }}>
+						<Link className="my-link" href="/contactus">
+							Contact Us
+						</Link>
+					</p>
+				) : (
+					<p>
+						<Link className="my-link" href="/contactus">
+							Contact Us
+						</Link>
+					</p>
+				)}
+				{/* <button
+					onClick={() => {
+						console.log(pathname);
+					}}
+				>
+					Click
+				</button> */}
 			</div>
 		</div>
 	);

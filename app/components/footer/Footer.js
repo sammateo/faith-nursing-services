@@ -11,7 +11,7 @@ export default function Footer() {
 			<div>
 				<p>office: +1 246 271-1419</p>
 				<p>
-					cell/WhatsApp: +1 246 243-5188{" "}
+					cell/WhatsApp:
 					<span style={{ whiteSpace: "nowrap" }}>+1 246 243-1946</span>{" "}
 					<span style={{ whiteSpace: "nowrap" }}>+1 246 232-1419</span>
 				</p>

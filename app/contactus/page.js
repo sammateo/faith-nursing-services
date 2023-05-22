@@ -26,10 +26,7 @@ export default function contactus() {
 					<div>
 						<h3>Phone</h3>
 						<p>Office: +1 (246) 271-1419</p>
-						<p>
-							Cell/WhatsApp: +1 (246) 241-1946 +1 (246) 243-5188 +1 (246)
-							232-1419
-						</p>
+						<p>Cell/WhatsApp: +1 (246) 241-1946 +1 (246) 232-1419</p>
 					</div>
 				</div>
 			</div>
