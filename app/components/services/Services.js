@@ -32,11 +32,11 @@ export default function Services() {
 			<Title title={"Services We Offer"} />
 			<div className={styles.servicesContainer}>
 				{serviceList.map((service) => (
-					<div className={styles.service}>
+					<div key={service.name} className={styles.service}>
 						<h3>{service.name}</h3>
 						<ul>
 							{service.list.map((item) => (
-								<li>{item}</li>
+								<li key={item}>{item}</li>
 							))}
 						</ul>
 					</div>

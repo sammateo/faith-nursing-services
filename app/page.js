@@ -1,13 +1,27 @@
-// "use-client";
-//state management/hooks should be done client side
-import Image from "next/image";
 import styles from "./page.module.css";
-import Card from "./components/card/Card";
 import NavBar from "./components/navbar/NavBar";
 import Landing from "./components/landing/Landing";
 import Services from "./components/services/Services";
 
 export default function Home() {
+	let serviceInfo = [
+		{
+			text: "We provide Babysitting and Pateint Care",
+			img: "",
+		},
+		{
+			text: "General Nursing Services for elderly and recovering patients",
+			img: "",
+		},
+		{
+			text: "We take care of you in the comfort of your own home",
+			img: "",
+		},
+		{
+			text: "We offer light cleaning, laundry and cooking",
+			img: "",
+		},
+	];
 	return (
 		<main className={styles.main}>
 			<NavBar />
@@ -22,6 +36,7 @@ export default function Home() {
 					patients
 				</p>
 			</div>
+			<div></div>
 			<Services />
 		</main>
 	);

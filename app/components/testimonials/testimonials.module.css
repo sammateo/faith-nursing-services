@@ -1,0 +1,27 @@
+.container {
+	background-color: rgba(0, 128, 0, 0.1);
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+.testimonialscontainer {
+	display: flex;
+	flex-wrap: wrap;
+}
+.testimonial {
+	font-size: 18px;
+	width: 90vw;
+	max-width: 700px;
+	margin: 20px auto;
+	padding: 20px;
+	background-color: white;
+	border-left: 3px solid green;
+	box-shadow: 5px 5px 5px rgba(0, 128, 0, 0.3);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	gap: 20px;
+}
+.name {
+	margin-left: auto;
+	margin-right: auto;
+}

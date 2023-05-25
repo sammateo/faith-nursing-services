@@ -5,10 +5,7 @@ import styles from "./navbar.module.css";
 import Link from "next/link";
 function NavBar() {
 	const pathname = usePathname();
-	const [windowSize, setWindowSize] = useState([
-		window.innerWidth,
-		window.innerHeight,
-	]);
+	const [windowSize, setWindowSize] = useState([]);
 
 	useEffect(() => {
 		const handleWindowResize = () => {
@@ -26,7 +23,6 @@ function NavBar() {
 	});
 	let openMenu = () => {
 		document.querySelector(".navitems").style.transform = "translateX(0vw)";
-		// document.querySelector(".navitems").style.backgroundColor = "blue";
 	};
 	let closeMenu = () => {
 		document.querySelector(".navitems").style.transform = "translateX(-100vw)";
@@ -103,13 +99,6 @@ function NavBar() {
 						</Link>
 					</p>
 				)}
-				{/* <button
-					onClick={() => {
-						console.log(pathname);
-					}}
-				>
-					Click
-				</button> */}
 			</div>
 		</div>
 	);

@@ -16,12 +16,13 @@ export default function contactus() {
 						If you have any questions or comments, please contact us via phone,
 						email, or WhatsApp.
 					</p>
-					<p>Tell us about your needs and we’ll show you how we can help.</p>
+					<p>Tell us about your needs and we'll show you how we can help.</p>
 				</div>
 				<div className={styles.contactinfo}>
 					<div>
 						<h3>Email</h3>
-						<p>WINNLOVE1@HOTMAIL.COM</p>
+						<p>faithnursingservices1@gmail.com</p>
+						<p>winnlove1@hotmail.com</p>
 					</div>
 					<div>
 						<h3>Phone</h3>

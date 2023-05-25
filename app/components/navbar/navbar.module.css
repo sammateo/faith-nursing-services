@@ -48,6 +48,10 @@
 		height: 100vh;
 		background-color: white;
 		/* background-color: green; */
+		padding: 50px 30vw;
+		justify-content: flex-start;
+		gap: 50px;
+
 		transition: all ease-in-out 0.5s;
 		transform: translateX(-100vw);
 	}

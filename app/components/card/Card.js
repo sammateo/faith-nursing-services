@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./card.module.css";
-import Image from "next/image";
 
 function Card({ info, image, size }) {
 	return (
