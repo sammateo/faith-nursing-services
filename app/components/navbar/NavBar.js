@@ -25,7 +25,8 @@ function NavBar() {
 		document.querySelector(".navitems").style.transform = "translateX(0vw)";
 	};
 	let closeMenu = () => {
-		document.querySelector(".navitems").style.transform = "translateX(-100vw)";
+		document.querySelector(".navitems").style.transform =
+			"translateX(-100vw)";
 	};
 	return (
 		<div className={styles.navbar}>
@@ -36,11 +37,27 @@ function NavBar() {
 							color: "green",
 							fontWeight: "bold",
 							letterSpacing: "1px",
+							display: "flex",
+							flexDirection: "column",
 						}}
 						className="my-link"
 						href="/"
 					>
 						Faith Nursing Services
+						<span
+							style={{
+								fontWeight: "normal",
+								fontSize: "14px",
+								letterSpacing: "0.5px",
+								borderTop: "1px solid green",
+								marginTop: "2px",
+								paddingTop: "2px",
+								// marginBottom: "5px",
+							}}
+							className={styles.establishedText}
+						>
+							Established in '09
+						</span>
 					</Link>
 				</p>
 				<img

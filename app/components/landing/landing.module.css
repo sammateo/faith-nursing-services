@@ -5,9 +5,17 @@
 	background-position: center center;
 	background-color: white;
 }
-.landing p {
+/* .landing p {
 	padding: 20px;
 	height: 70vh;
+	display: grid;
+	place-items: center;
+	font-size: 2rem;
+	text-align: center;
+} */
+.landing p {
+	padding: 20px;
+	height: 80vh;
 	display: grid;
 	place-items: center;
 	font-size: 2rem;
